@@ -1,0 +1,429 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="{% static 'src/favicon.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'src/css/bulma.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'src/css/app.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar is-transparent box">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="/pybloguz/static/img/logo.png" alt="" />
+        </a>
+        <div
+          class="navbar-burger"
+          data-target="navbarExampleTransparentExample"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/"> Bosh sahifa </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#"> Turkumlar </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="">
+                <i class="fab fa-python"></i> Python
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fab fa-js"></i> Javascript
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fas fa-terminal"></i> Dasturlash
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fas fa-code"></i> Veb dasturlash
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fas fa-cat"></i> Foundation
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fas fa-info"></i> Boshqa
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#"> Teglar </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="">
+                <i class="fab fa-python"></i> Python
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fab fa-js"></i> Javascript
+              </a>
+              <a class="navbar-item" href="/">
+                <i class="fas fa-database"></i> Data Base
+              </a>
+              <a class="navbar-item" href="/">
+                <i class="fas fa-palette"></i> Fron-End
+              </a>
+              <a class="navbar-item" href="/">
+                <i class="fas fa-cogs"></i> Back-End
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fas fa-terminal"></i> Dasturlash
+              </a>
+              <a class="navbar-item" href="/">
+                <i class="fas fa-bezier-curve"></i> Veb dizayn
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fas fa-globe-americas"></i> Umumiy
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fab fa-css3"></i> CSS
+              </a>
+              <a class="navbar-item" href="">
+                <i class="fab fa-html5"></i> HTML
+              </a>
+            </div>
+          </div>
+          <a class="navbar-item" href="/"> Aloqa </a>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+      <div class="column is-3">
+        <article class="panel">
+          <p class="panel-heading bg-orange">Qidiramizmi ?</p>
+
+          <form
+            class="panel-block"
+            id="searchForm"
+            action="#"
+            method="get"
+            onkeydown="InlineSearch(this[0].value)"
+          >
+            <p class="control has-icons-left">
+              <input
+                class="input is-success"
+                type="text"
+                placeholder="Qanday mavzuda  ?"
+              />
+              <span class="icon is-left">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </span>
+            </p>
+          </form>
+          <span id="result_list">
+            <a
+              href="/post/pythonda-imlo-xatolarini-tuzatish-dasturi"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              Pythonda imlo xatolarini tuzatish dasturi
+            </a>
+
+            <a
+              href="/post/100-ta-eng-yaxshi-veb-dizayn-vositalari-stock-rasmlar-10-taligi"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-image" aria-hidden="true"></i>
+              </span>
+              100 ta eng yaxshi veb-dizayn vositalari: Stock rasmlar 10 taligi
+            </a>
+
+            <a
+              href="/post/100-ta-eng-yaxshi-veb-dizayn-vositalari-fontlar-10-taligi"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-cogs" aria-hidden="true"></i>
+              </span>
+              100 ta eng yaxshi veb-dizayn vositalari: Fontlar 10 taligi
+            </a>
+
+            <a
+              href="/post/python-yordamida-pdf-fayllarini-birlashtirish"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+              </span>
+              Python yordamida PDF fayllarini birlashtirish
+            </a>
+
+            <a
+              href="/post/dark-web-va-darknetlar"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-user-secret" aria-hidden="true"></i>
+              </span>
+              Dark web va darknet’lar.
+            </a>
+
+            <a
+              href="/post/axborotlarni-kodlashtirish-kriptotizim"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+              </span>
+              Axborotlarni kodlashtirish. Kriptotizim.
+            </a>
+
+            <a
+              href="/post/it-lugat-bilan-tanishamiz-a"
+              class="panel-block is-active"
+            >
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              IT lug'at bilan tanishamiz . A.
+            </a>
+          </span>
+        </article>
+        <br />
+        <article class="panel is-info">
+          <p class="panel-heading bg-blue">TOP Turkumlar</p>
+
+          <a href="/category/python/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-python" aria-hidden="true"></i>
+            </span>
+            Python
+          </a>
+
+          <a href="/category/javascript/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-js" aria-hidden="true"></i>
+            </span>
+            Javascript
+          </a>
+
+          <a href="/category/dasturlash/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-terminal" aria-hidden="true"></i>
+            </span>
+            Dasturlash
+          </a>
+
+          <a href="/category/veb-dasturlash/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-code" aria-hidden="true"></i>
+            </span>
+            Veb dasturlash
+          </a>
+
+          <a href="/category/foundation/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-cat" aria-hidden="true"></i>
+            </span>
+            Foundation
+          </a>
+
+          <a href="/category/boshqa/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-info" aria-hidden="true"></i>
+            </span>
+            Boshqa
+          </a>
+        </article>
+        <br />
+        <article class="panel">
+          <p class="panel-heading bg-orange">TOP Teglar</p>
+
+          <a href="/tag/python/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-python" aria-hidden="true"></i>
+            </span>
+            Python
+          </a>
+
+          <a href="/tag/javascript/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-js" aria-hidden="true"></i>
+            </span>
+            Javascript
+          </a>
+
+          <a href="/tag/data-base/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-database" aria-hidden="true"></i>
+            </span>
+            Data Base
+          </a>
+
+          <a href="/tag/fron-end/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-palette" aria-hidden="true"></i>
+            </span>
+            Fron-End
+          </a>
+
+          <a href="/tag/back-end/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-cogs" aria-hidden="true"></i>
+            </span>
+            Back-End
+          </a>
+
+          <a href="/tag/dasturlash/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-terminal" aria-hidden="true"></i>
+            </span>
+            Dasturlash
+          </a>
+
+          <a href="/tag/veb-dizayn/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-bezier-curve" aria-hidden="true"></i>
+            </span>
+            Veb dizayn
+          </a>
+
+          <a href="/tag/umumiy/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-globe-americas" aria-hidden="true"></i>
+            </span>
+            Umumiy
+          </a>
+
+          <a href="/tag/css/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-css3" aria-hidden="true"></i>
+            </span>
+            CSS
+          </a>
+
+          <a href="/tag/html/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-html5" aria-hidden="true"></i>
+            </span>
+            HTML
+          </a>
+
+          <a href="/tag/tarmoq/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-network-wired" aria-hidden="true"></i>
+            </span>
+            Tarmoq
+          </a>
+
+          <a href="/tag/xavfsizlik/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-user-secret" aria-hidden="true"></i>
+            </span>
+            Xavfsizlik
+          </a>
+
+          <a href="/tag/kompyuter/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+            </span>
+            Kompyuter
+          </a>
+
+          <a href="/tag/django/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-python" aria-hidden="true"></i>
+            </span>
+            Django
+          </a>
+
+          <a href="/tag/linux/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-linux" aria-hidden="true"></i>
+            </span>
+            Linux
+          </a>
+
+          <a href="/tag/macos/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-apple" aria-hidden="true"></i>
+            </span>
+            MacOS
+          </a>
+
+          <a href="/tag/windows/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-windows" aria-hidden="true"></i>
+            </span>
+            Windows
+          </a>
+
+          <a href="/tag/maslahat/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-bullhorn" aria-hidden="true"></i>
+            </span>
+            Maslahat
+          </a>
+
+          <a href="/tag/it-ga-oid/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-network-wired" aria-hidden="true"></i>
+            </span>
+            IT ga oid
+          </a>
+
+          <a href="/tag/foydali/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-plus" aria-hidden="true"></i>
+            </span>
+            Foydali
+          </a>
+
+          <a href="/tag/tutorial/" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </span>
+            Tutorial
+          </a>
+        </article>
+        <br />
+        <article class="panel is-info">
+          <p class="panel-heading bg-blue">Ijtimoiy tarmoqlarimiz</p>
+
+          <a href="https://t.me/pybloguz" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-telegram" aria-hidden="true"></i>
+            </span>
+            Telegram
+          </a>
+          <a
+            href="https://www.instagram.com/pyblog.uz/"
+            class="panel-block is-active"
+          >
+            <span class="panel-icon">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </span>
+            Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/pybloguz"
+            class="panel-block is-active"
+          >
+            <span class="panel-icon">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+            </span>
+            Facebook
+          </a>
+          <a href="https://twitter.com/pybloguz" class="panel-block is-active">
+            <span class="panel-icon">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </span>
+            Twitter
+          </a>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

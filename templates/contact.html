@@ -1,0 +1,154 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-full box">
+        <nav class="breadcrumb p-2" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon is-small">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                </span>
+                <span>Bosh sahifa</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small">
+                  <i class="fas fa-exclamation" aria-hidden="true"></i>
+                </span>
+                <span>Asosiy</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                </span>
+                <span>Aloqa</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- FORM -->
+    <div class="columns is-1">
+      <div class="column is-6">
+        <div class="title mt-5">Aloqa formasi</div>
+
+        <form action="" method="post" id="contactForm">
+          <div class="field">
+            <label class="label">Ism-Familya</label>
+            <div class="control">
+              <input
+                type="text"
+                name="name"
+                class="input"
+                maxlength="50"
+                required=""
+                id="id_name"
+              />
+              <input
+                type="hidden"
+                name="csrfmiddlewaretoken"
+                value="qOIjlOFGB11k1NEXdP15KSYTa0vQv6EjDJzTPQ70TVRe68ug3pNuQwFw4wZ6ppUs"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                type="email"
+                name="email"
+                class="input"
+                maxlength="254"
+                required=""
+                id="id_email"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <!-- <span class="icon is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                      </span> -->
+            </div>
+            <!-- <p class="help is-danger">This email is invalid</p> -->
+          </div>
+
+          <div class="field">
+            <label class="label">Mavzu</label>
+            <div class="control">
+              <div class="select">
+                <select name="subject" required="" id="id_subject">
+                  <option value="" selected="">---------</option>
+
+                  <option value="posts">Maqola yuzasidan</option>
+
+                  <option value="minus">Kamchiliklar yuzasidan</option>
+
+                  <option value="plus">Takliflar yuzasidan</option>
+
+                  <option value="other">Boshqa mavzuda</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Xabar</label>
+            <div class="control">
+              <textarea
+                name="message"
+                cols="40"
+                rows="5"
+                class="textarea"
+                maxlength="250"
+                required=""
+                id="id_message"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button bg-blue has-text-white">
+                Yuborish
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="column is-1"></div>
+      <div class="column is-5">
+        <div class="map mt-5">
+          <div style="position: relative; overflow: hidden">
+            <a
+              href="https://yandex.uz/maps/org/robocode_it_academy/244547238422/?utm_medium=mapframe&amp;utm_source=maps"
+              style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+              >RoboCode IT Academy</a
+            ><a
+              href="https://yandex.uz/maps/10329/andijan/category/educational_center/184106168/?utm_medium=mapframe&amp;utm_source=maps"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 14px;
+              "
+              >Учебный центр в Андижане</a
+            ><iframe
+              src="https://yandex.uz/map-widget/v1/-/CCUFfBr-3C"
+              width="100%"
+              height="400"
+              frameborder="1"
+              allowfullscreen="true"
+              style="position: relative"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

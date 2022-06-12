@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html{
+    scroll-behavior:smooth;
+}
+body {
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#banner_tags li {
+    margin: 5px auto;
+}
+
+#banner_tags li a {
+    color: aliceblue;
+}
+
+.my-center {
+    display: flex;
+    justify-content: center;
+}
+
+.text-orange {
+    color: #FFD830;
+}
+
+.bg-orange {
+    background-color: #FFD830;
+}
+
+.text-blue {
+    color: #0076AB;
+}
+
+.bg-blue {
+    background-color: #0076AB;
+}
+
+.comment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.comment-image {
+    display: inline-block;
+}
+
+.comment-body {
+    display: inline-block;
+}
+
+
+/* .post {
+    max-height: 400px;
+} */
+
+.first-section {
+    padding-top: 30px;
+}
+
+.tgme_widget_share_wrap .tgme_widget_share__large {
+    margin: 0;
+}
+
+#main_post {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post_image {
+    float: left;
+    width: 60%;
+    margin-right: 15px;
+}
+#content{
+    padding:20px 40px !important;
+}
+
+@media screen and (max-width:1200px) {
+    .first-section {
+        padding-top: 30px;
+    }
+    #main_post {
+        display: flex;
+        flex-direction: column;
+    }
+    .post_image {
+        float: left;
+        width: 100%;
+        min-width: 200px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .first-section {
+        padding-top: 10px;
+    }
+    #main_post {
+        display: flex;
+        flex-direction: column;
+    }
+    .post_image {
+        float: left;
+        width: 100%;
+        min-width: 200px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .first-section {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .first-section {
+        padding-top: 0px;
+    }
+}
