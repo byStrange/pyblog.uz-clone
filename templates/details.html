@@ -1,3 +1,4 @@
+{% extends 'base.html' %} {% block content %}
 <section class="section mt-0 pt-3">
   <div class="container">
     <div class="columns is-1">
@@ -8,78 +9,11 @@
               <a
                 href="/post/100-ta-eng-yaxshi-veb-dizayn-vositalari-stock-rasmlar-10-taligi"
               >
-                100 ta eng yaxshi veb-dizayn vositalari: Stock rasmlar 10 taligi
+                {{ post.title }}
               </a>
             </div>
             <div class="content is-size-5 mt-5">
-              <p>
-                Ishlash va o'qishga yordam beradigan foydali veb-dizayn
-                havolalari: tipografiya, stok fotosuratlari va grafikalar,
-                infografika, hamkorlik vositalari, logotip dizayni va
-                prototiplash, grafik muharrirlar va yangi go'yalar uchun
-                veb-saytlar.
-              </p>
-
-              <p>
-                Veb-dizayner uchun ishni sezilarli darajada osonlashtiradigan 10
-                pullik va bepul Stock rasmlar beruvchi insturmentlar.
-              </p>
-
-              <p>
-                1. <a href="https://pixabay.com/">Pixabay </a>- Yuqori sifatli
-                tasvirlarni ko'rib chiqing va yuklab oling (VPN orqali mavjud).
-              </p>
-
-              <p>
-                2. <a href="https://unsplash.com/">Unsplash </a>- stok
-                tasvirlar.
-              </p>
-
-              <p>
-                3. <a href="https://www.stocksy.com/">Stocksy </a>- Chiroyli va
-                asl stok fotosuratlarini litsenziya va hokazolarsiz yuklab
-                oling.
-              </p>
-
-              <p>
-                4. <a href="https://www.pexels.com/">Pexels </a>- eng yaxshi
-                bepul stok fotosuratlari.
-              </p>
-
-              <p>
-                5. <a href="http://www.gratisography.com/">Gratisografiya </a>-
-                Rayan MakGuayr minglab ajoyib kadrlarni to'plagan. Ularning
-                barchasini bepul oling.
-              </p>
-
-              <p>
-                6. <a href="https://stock.adobe.com/">Adobe Stock</a> sizning
-                ijodiy loyihangiz uchun mukammal manbadir.
-              </p>
-
-              <p>
-                7. <a href="http://zoommyapp.com/">Zoommy </a>- Bitta ish stoli
-                ilovasida to'plangan, turli manbalardan olingan bepul suratlar.
-              </p>
-
-              <p>
-                8. <a href="http://nos.twnsnd.co/">New Old Stock</a> - davlatlar
-                arxivlaridan eski fotosuratlar.
-              </p>
-
-              <p>
-                9. <a href="http://www.splitshire.com/">SplitShire </a>-
-                veb-dizayner Daniel Nanesku yuzlab ajoyib fotosuratlarni siz
-                bilan baham ko'radi.
-              </p>
-
-              <p>
-                10.
-                <a href="http://deathtothestockphoto.com/"
-                  >Death to the stock photo</a
-                >
-                - Har oy elektron pochta orqali original suratlarni oling.
-              </p>
+              {{ post.content }}
             </div>
             <hr />
             <div class="notification is-warning" style="display: none">
@@ -92,29 +26,17 @@
             <p class="is-right"></p>
             <div class="columns">
               <div class="column is-8">
-                Tags
+                Tags {% for tag in post.tags.objects.all %}
+
                 <span class="tag is-small m-1">
-                  <i class="fas fa-palette text-blue"></i>
-                  <a href="/tag/fron-end/">Fron-End</a>
+                  <i class="{{ tag.icon }} text-blue"></i>
+                  <a href="{% url 'tag' tag.slug %}"> {{tag.name}} </a>
                 </span>
-                <span class="tag is-small m-1">
-                  <i class="fas fa-bezier-curve text-blue"></i>
-                  <a href="/tag/veb-dizayn/">Veb dizayn</a>
-                </span>
-                <span class="tag is-small m-1">
-                  <i class="fas fa-bullhorn text-blue"></i>
-                  <a href="/tag/maslahat/">Maslahat</a>
-                </span>
-                <span class="tag is-small m-1">
-                  <i class="fas fa-network-wired text-blue"></i>
-                  <a href="/tag/it-ga-oid/">IT ga oid</a>
-                </span>
-                <span class="tag is-small m-1">
-                  <i class="fas fa-plus text-blue"></i>
-                  <a href="/tag/foydali/">Foydali</a>
-                </span>
+
+                {% endfor %}
                 <br />
-                Muallif :<span class="text-blue"><a href="#">master</a></span>
+                Muallif :
+                <span class="text-blue"><a href="#">{{ post.author }}</a></span>
                 <div class="icon-text mt-1">
                   <span>Ko'rildi</span>
                   <span class="icon has-text-link">
@@ -127,7 +49,7 @@
                   <span class="icon has-text-link">
                     <i class="fas fa-comments"></i>
                   </span>
-                  <span>0 ta</span>
+                  <span>{{ post.likes }} ta</span>
                 </div>
               </div>
               <div class="column is-4">
@@ -135,7 +57,7 @@
                   <b class="pr-1"
                     >Yoqdi
                     <i class="fas fa-heart text-orange"></i>
-                    <span id="ups">0</span></b
+                    <span id="ups">{{ post.dislikes }}</span></b
                   >
                 </span>
 
@@ -408,3 +330,5 @@
     </div>
   </div>
 </section>
+
+{% endblock %}

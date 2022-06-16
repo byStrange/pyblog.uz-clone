@@ -49,6 +49,7 @@ class Post(models.Model):
     dislikes = models.IntegerField(default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    poster = models.ImageField(upload_to='images/', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
